@@ -14,8 +14,8 @@ flowchart TD;
     YA[localhost:3000 CORS localhost:8081]<--localhost:8081-->BAB[vue.config.js]
   
     A[DBexplorers_api]<-.-B(PostgreSQL);
-    Migration<-->DDD(Create, Modifie, Delete);
-    DDD(Create, Modifie, Delete)<--ModelPrisma-->YB[seeds.js]
+    Migration<-->DDD(Create, Modify, Delete);
+    DDD(Create, Modify, Delete)<--ModelPrisma-->YB[seeds.js]
     YB[seeds.js]-->CCC[server.js];
     AA[DBstudents_api]<-.-B(PostgreSQL)<-->Migration<-->CC{PrismaDataBase}<-->CCC[server.js]<--localhost:3000-->YA[localhost:3000 CORS localhost:8081];
 ```
